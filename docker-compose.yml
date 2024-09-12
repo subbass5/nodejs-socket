@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - PORT=80
+    volumes:
+      - ./certs:/certs
